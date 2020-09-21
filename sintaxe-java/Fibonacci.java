@@ -9,11 +9,13 @@ import java.math.BigInteger;
 *elemento (ex: 8 = 5 + 3)*/
 
 class Fibonacci{
-    public static void main(String[] args){
+    
+    //retorna os 101 primeiros numeros da serie fibonacci
+    public static void primeiros101numFib(){
         BigInteger n1 = new BigInteger("0");
         BigInteger n2 = new BigInteger("1");
         BigInteger fib = new BigInteger("0");
-        System.out.print("Série de Fibonacci: " + n1 + ", " + n2 + ", " );
+        System.out.print("Primeiros 101 números da Série de Fibonacci: " + n1 + ", " + n2 + ", " );
 
         for(int i = 2; i <= 100; i++){
             fib = n1.add(n2);
@@ -21,7 +23,22 @@ class Fibonacci{
             n2 = fib;
             System.out.print(fib + ", ");
         }
-
         System.out.println("...");
+    }
+    
+    public static void main(String[] args){
+       int n1 = 0, n2 = 1, fib = 0;
+        System.out.print("Série de Fibonacci até passar de 100: " + n1 + ", " + n2 + ", " );
+
+        while(fib < 100){
+            fib = n1 + n2;
+            n1 = n2;
+            n2 = fib;
+            System.out.print(fib + ", ");
+        }
+        System.out.println("...");
+
+        System.out.println("");
+        primeiros101numFib();
     }
 }
