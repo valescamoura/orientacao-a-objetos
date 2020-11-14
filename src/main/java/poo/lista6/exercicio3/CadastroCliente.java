@@ -1,7 +1,7 @@
 package poo.lista6.exercicio3;
 
 public class CadastroCliente {
-    private static int numMaxClientes = 2;
+    private static int numMaxClientes = 10;
     private static int qtdClientes = 0;
     private static Cliente[] clientes = new Cliente[numMaxClientes];
 
